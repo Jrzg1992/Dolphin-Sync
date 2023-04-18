@@ -1,6 +1,6 @@
 # Dolphin-Sync
 
-Dolphin-Sync项目，期望能给予大家在“EXCEL与其他应用通讯”一些启发，本项目未经过压力测试，虽然能正常运行，但存在较多BUG，请大酌情参考。
+Dolphin-Sync项目，期望能给予大家在“EXCEL与其他应用通讯”一些启发，本项目未经过压力测试，虽然能正常运行，但可能存在较多BUG，请酌情参考。
 
 The Dolphin-Sync project is expected to provide some inspiration for everyone in "communicating with other applications in Excel". This project has not undergone stress testing and although it can operate normally, there are many bugs. Please refer to it as appropriate.
 
