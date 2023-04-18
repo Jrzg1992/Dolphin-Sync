@@ -1,5 +1,8 @@
 
 Dolphin-Sync项目
+【海豚同步项目】
+
+
 
 期望能给予大家在“EXCEL与其他应用通讯”一些启发，本项目未经过压力测试，虽然能正常运行，但可能存在较多BUG，请酌情参考。
 
@@ -37,6 +40,7 @@ ZeroMQ（也称为PXS MQ、0MQ或zmq）看起来像一个可嵌入的网络库�
 代码运行：
 
 ![1681811694608](https://user-images.githubusercontent.com/24450492/232741625-bb970134-54ab-4f60-84a4-8522a60fb74c.png)
+
 
 
 二. 将EXCEL界面的所有数据转发到python，并进行实时同步。
