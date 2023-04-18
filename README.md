@@ -1,7 +1,10 @@
 # Dolphin-Sync
 
+Dolphin-Sync主要有以下3个应用：
 
-一 . 通过vba（Visual Basic for Applications）实现EXCEL数据的zmq传输；
+该项目主要由以下三个功能：
+
+一 . 通过vba（Visual Basic for Applications）实现EXCEL数据的zmq传输。【Implementing zmq transmission of EXCEL data through Visual Basic for Applications】
 
 Excel VBA有多种方式将数据进行广播。
 
@@ -34,19 +37,13 @@ ZeroMQ（也称为PXS MQ、0MQ或zmq）看起来像一个可嵌入的网络库�
 ![1681811694608](https://user-images.githubusercontent.com/24450492/232741625-bb970134-54ab-4f60-84a4-8522a60fb74c.png)
 
 
-二. 将EXCEL界面的所有数据转发到python，并进行实时同步
+二. 将EXCEL界面的所有数据转发到python，并进行实时同步。【Forward all data from the EXCEL interface to Python and perform real-time synchronization】
 ![1681811544540](https://user-images.githubusercontent.com/24450492/232740930-d15e05a0-8f5f-4289-9dca-ac406294eb4a.png)
 
-三. 与EXCEL 插件功能结合
+三. 与EXCEL 插件功能结合，更具有扩展性。【Combined with EXCEL plugin functionality for greater scalability】
 
 1. wind 和 Choice 的EXCEL 插件可以将数据实时更新到EXCEL,其他的Api往往要付费，通过该工具可以将数据同步转发。
 2. 将EXCEL作为服务器，不必再进行UI的开发。
 
 ![1681815358102](https://user-images.githubusercontent.com/24450492/232756542-eff3caca-04d5-4c2d-b003-2f7f08574348.png)
-
-
-
-
-
-
 
