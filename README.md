@@ -10,9 +10,11 @@ ZeroMQ（也称为PXS MQ、0MQ或zmq）看起来像一个可嵌入的网络库�
 
 需要提前准备：
 1. VBA不直接支持ZeroMQ，需要将C版本的ZeroMQ编译Dll，在VBA中调用。【本代码库给出了WIN10 64位EXCEL 版本】
+
 ![1681810506938](https://user-images.githubusercontent.com/24450492/232736279-f90e1ec8-f526-4af5-a249-1fbece6c8816.png)
 
 2. vba页面——工具——引用，增加“Microsoft Scripting Runtime”
+
 ![1681811043225](https://user-images.githubusercontent.com/24450492/232738842-18e4bf5c-ad24-4ddc-8e7c-ea664f825d1c.png)
 
 3. 添加VBA-JSON模块
