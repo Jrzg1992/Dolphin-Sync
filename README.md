@@ -18,10 +18,13 @@ ZeroMQ（也称为PXS MQ、0MQ或zmq）看起来像一个可嵌入的网络库�
 3. 添加VBA-JSON模块
 参考：https://github.com/VBA-tools/VBA-JSON
 
+代码运行：
+
+![1681811694608](https://user-images.githubusercontent.com/24450492/232741625-bb970134-54ab-4f60-84a4-8522a60fb74c.png)
 
 
-
-二. 将EXCEL的数据实时转发到python，并进行展示
+二. 将EXCEL界面的所有数据转发到python，并进行实时同步
+![1681811544540](https://user-images.githubusercontent.com/24450492/232740930-d15e05a0-8f5f-4289-9dca-ac406294eb4a.png)
 
 
 
