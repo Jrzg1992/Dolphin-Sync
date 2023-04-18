@@ -1,85 +1,50 @@
-The Dolphin-Sync project is expected to provide some inspiration for everyone in "communicating with other applications in Excel". This project has not undergone stress testing and although it can run normally, there may be many bugs. Please refer to it as appropriate.
 
-This project mainly consists of the following three functions:
+Dolphin-Sync项目，期望能给予大家在“EXCEL与其他应用通讯”一些启发，本项目未经过压力测试，虽然能正常运行，但可能存在较多BUG，请酌情参考。
 
-I Realize zmq transmission of EXCEL data through Visual Basic for Applications.
-
-Excel VBA has multiple ways to broadcast data.
+该项目主要由以下三个功能：
 
 
-ZeroMQ (also known as PXS MQ, 0MQ, or zmq) looks like an embeddable network library, but its function is similar to a concurrency framework.
+一 . 通过vba（Visual Basic for Applications）实现EXCEL数据的zmq传输。
+
+Excel VBA有多种方式将数据进行广播。
+
+ZeroMQ（也称为PXS MQ、0MQ或zmq）看起来像一个可嵌入的网络库，但其作用类似于一个并发框架。
+
+它为您提供了在各种传输（如进程内、进程间、TCP和多播）上承载原子消息的套接字。
+
+您可以使用pub-sub、任务分发和请求回复等模式将套接字N到N连接起来。
+
+它足够快，可以成为集群各部分。
+
+它的异步I/O模型为您提供了可扩展的多核应用程序，这些应用程序是作为异步消息处理任务构建的。
+
+它有许多语言API，并且在大多数操作系统上运行。
+
+需要提前准备：
+1. VBA不直接支持ZeroMQ，需要将C版本的ZeroMQ编译Dll，在VBA中调用。【本代码库给出了WIN10 64位EXCEL 版本】
+
+![1681810506938](https://user-images.githubusercontent.com/24450492/232736279-f90e1ec8-f526-4af5-a249-1fbece6c8816.png)
+
+2. vba页面——工具——引用，增加“Microsoft Scripting Runtime”
+
+![1681811043225](https://user-images.githubusercontent.com/24450492/232738842-18e4bf5c-ad24-4ddc-8e7c-ea664f825d1c.png)
+
+3. 添加VBA-JSON模块
+参考：https://github.com/VBA-tools/VBA-JSON
+
+代码运行：
+
+![1681811694608](https://user-images.githubusercontent.com/24450492/232741625-bb970134-54ab-4f60-84a4-8522a60fb74c.png)
 
 
+二. 将EXCEL界面的所有数据转发到python，并进行实时同步。
 
-It provides you with sockets that host atomic messages on various transports such as intra process, inter process, TCP, and multicast.
+![1681811544540](https://user-images.githubusercontent.com/24450492/232740930-d15e05a0-8f5f-4289-9dca-ac406294eb4a.png)
 
+三. 与EXCEL 插件功能结合，更具有扩展性。
 
+1. wind 和 Choice 的EXCEL 插件可以将数据实时更新到EXCEL,其他的Api往往要付费，通过该工具可以将数据同步转发。
+2. 将EXCEL作为服务器，不必再进行UI的开发。
 
-You can use patterns such as pub sub, task distribution, and request reply to connect sockets N to N.
+![1681815358102](https://user-images.githubusercontent.com/24450492/232756542-eff3caca-04d5-4c2d-b003-2f7f08574348.png)
 
-
-
-It is fast enough to become part of the cluster.
-
-
-
-Its asynchronous I/O model provides you with scalable multi-core applications built as asynchronous message processing tasks.
-
-
-
-It has many language APIs and runs on most operating systems.
-
-
-
-Need to prepare in advance:
-
-1. VBA does not directly support ZeroMQ. You need to compile ZeroMQ version C into Dll and call it in VBA. This code library provides the WIN10 64 bit EXCEL version
-
-
-
-! [1681810506938]( https://user-images.githubusercontent.com/24450492/232736279-f90e1ec8-f526-4af5-a249-1fbece6c8816.png )
-
-
-
-2. vba page - Tools - Reference, adding 'Microsoft Scripting Runtime'
-
-
-
-! [1681811043225]( https://user-images.githubusercontent.com/24450492/232738842-18e4bf5c-ad24-4ddc-8e7c-ea664f825d1c.png )
-
-
-
-3. Add VBA-JSON module
-
-reference resources: https://github.com/VBA-tools/VBA-JSON
-
-
-
-Code Run:
-
-
-
-! [1681811694608]( https://user-images.githubusercontent.com/24450492/232741625-bb970134-54ab-4f60-84a4-8522a60fb74c.png )
-
-
-
-
-II Forward all data from the EXCEL interface to Python and perform real-time synchronization.
-
-
-
-! [1681811544540]( https://user-images.githubusercontent.com/24450492/232740930-d15e05a0-8f5f-4289-9dca-ac406294eb4a.png )
-
-
-
-III Combined with the EXCEL plugin function, it has more scalability.
-
-
-
-1. The Excel plugins of Wind and Choice can update data in real-time to Excel, while other Api tools often require payment and can synchronize and forward data through this tool.
-
-2. Using EXCEL as a server eliminates the need for UI development.
-
-
-
-! [1681815358102]( https://user-images.githubusercontent.com/24450492/232756542-eff3caca-04d5-4c2d-b003-2f7f08574348.png )
