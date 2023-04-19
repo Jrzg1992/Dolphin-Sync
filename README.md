@@ -27,9 +27,16 @@ ZeroMQ（也称为PXS MQ、0MQ或zmq）看起来像一个可嵌入的网络库�
 它有许多语言API，并且在大多数操作系统上运行。
 
 需要提前准备：
-1. VBA不直接支持ZeroMQ，需要将C版本的ZeroMQ编译Dll，在VBA中调用。【本代码库给出了WIN10 64位EXCEL 版本】
+1. VBA不直接支持ZeroMQ，需要将C版本的ZeroMQ编译Dll，在VBA中调用。【本项目给出了WIN10 64位EXCEL 版本】
 
 ![1681810506938](https://user-images.githubusercontent.com/24450492/232736279-f90e1ec8-f526-4af5-a249-1fbece6c8816.png)
+
+部分电脑还需要安装 Microsoft Visual C++ Redistributable for Visual Studio 2015、2017 和 2019。
+
+下载地址：https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
+
+![1681876837738](https://user-images.githubusercontent.com/24450492/232963741-af90c032-7707-460e-b3b9-e0163f026eb2.png)
+
 
 2. vba页面——工具——引用，增加“Microsoft Scripting Runtime”
 
